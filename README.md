@@ -1,8 +1,8 @@
-# PDF Content Extractor and PDF Generator
+# Interview questions generator from resume [Live Link](https://interview-questions-generator-pied.vercel.app/)
 
 ## Overview
 
-This project is a React application that allows users to upload a PDF file, extract its text content, send the extracted text to an API for processing, and generate a PDF document based on the response. The application provides features to view and download the generated PDF.
+The project is a React application that allows users to upload a PDF file, extract its text content, send the extracted text to an API for processing, and generate a PDF document based on the response. The application creates interview questions based on the content of a resume.
 
 ## Features
 
