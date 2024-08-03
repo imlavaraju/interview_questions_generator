@@ -117,14 +117,14 @@ const App = () => {
         <p>&copy; 2024 Lavaraju Gorli</p>
         <div className={styles.socialLinks}>
           <a
-            href="https://linkedin.com/in/lavaraju-gorli"
+            href="https://www.linkedin.com/in/lavaraju-gorli/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://github.com/lavaraju-gorli"
+            href="https://github.com/imlavaraju"
             target="_blank"
             rel="noopener noreferrer"
           >
