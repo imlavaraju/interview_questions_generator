@@ -1,6 +1,3 @@
-Here's a basic README file for your project:
-
-````markdown
 # PDF Content Extractor and PDF Generator
 
 ## Overview
@@ -31,7 +28,6 @@ This project is a React application that allows users to upload a PDF file, extr
    ```bash
    git clone https://github.com/imlavaraju/interview_questions_generator.git
    ```
-````
 
 2. Navigate to the project directory:
 
@@ -89,7 +85,3 @@ const apiKey = "YOUR_GOOGLE_API_KEY";
 - [html2canvas](https://html2canvas.hertzen.com/)
 - [jsPDF](https://github.com/parallax/jsPDF)
 - [Next.js](https://nextjs.org/)
-
-```
-
-```
