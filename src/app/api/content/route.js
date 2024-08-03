@@ -5,7 +5,7 @@ export async function POST(request) {
   try {
     const { prompt } = await request.json();
 
-    const apiKey = "AIzaSyDR3BQSouqbhUWCeMabDExAUXWwT-2ROY4";
+    const apiKey = process.env.google_api_key;
     const genAI = new GoogleGenerativeAI(apiKey);
 
     // Debugging: log initialization

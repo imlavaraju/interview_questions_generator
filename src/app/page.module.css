@@ -2,11 +2,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: #f5f5f5;
   padding: 20px;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Ensure the main content takes up available space */
 }
 
 .fileInput {
@@ -58,4 +65,26 @@
 
 .button:hover {
   opacity: 0.8;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+.socialLinks {
+  margin-top: 10px;
+}
+
+.socialLinks a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.socialLinks a:hover {
+  text-decoration: underline;
 }

@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import pdfToText from "react-pdftotext"; // Ensure this library is correctly installed
+import pdfToText from "react-pdftotext";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import styles from "./page.module.css"; // Import the CSS file
+import styles from "./page.module.css";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const App = () => {
   const [data, setData] = useState("");
@@ -34,7 +35,7 @@ const App = () => {
   async function generatePdf(htmlContent) {
     const pdfContainer = document.createElement("div");
     pdfContainer.innerHTML = htmlContent;
-    pdfContainer.style.width = "210mm"; // Set the width of the container to A4 size in mm
+    pdfContainer.style.width = "210mm";
 
     document.body.appendChild(pdfContainer);
 
@@ -84,32 +85,60 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <input
-        type="file"
-        accept="application/pdf"
-        onChange={extractText}
-        className={styles.fileInput}
-      />
-      {loading && (
-        <div className={styles.loading}>
-          <div className={styles.loadingCircle}></div>
-        </div>
-      )}
-      {success && !loading && (
-        <div className={styles.success}>&#10003; PDF Generated!</div>
-      )}
-      <div>
-        {pdfBlob && (
-          <div className={styles.buttons}>
-            <button onClick={viewPdf} className={styles.button}>
-              View PDF
-            </button>
-            <button onClick={downloadPdf} className={styles.button}>
-              Download PDF
-            </button>
+      <main className={styles.main}>
+        <input
+          type="file"
+          accept="application/pdf"
+          onChange={extractText}
+          className={styles.fileInput}
+        />
+        {loading && (
+          <div className={styles.loading}>
+            <div className={styles.loadingCircle}></div>
           </div>
         )}
-      </div>
+        {success && !loading && (
+          <div className={styles.success}>&#10003; PDF Generated!</div>
+        )}
+        <div>
+          {pdfBlob && (
+            <div className={styles.buttons}>
+              <button onClick={viewPdf} className={styles.button}>
+                View PDF
+              </button>
+              <button onClick={downloadPdf} className={styles.button}>
+                Download PDF
+              </button>
+            </div>
+          )}
+        </div>
+      </main>
+      <footer className={styles.footer}>
+        <p>&copy; 2024 Lavaraju Gorli</p>
+        <div className={styles.socialLinks}>
+          <a
+            href="https://linkedin.com/in/lavaraju-gorli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://github.com/lavaraju-gorli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://twitter.com/lavaraju_gorli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter size={24} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

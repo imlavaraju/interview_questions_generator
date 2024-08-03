@@ -29,14 +29,14 @@ This project is a React application that allows users to upload a PDF file, extr
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/imlavaraju/interview_questions_generator.git
    ```
 ````
 
 2. Navigate to the project directory:
 
    ```bash
-   cd <project-directory>
+   cd interview_questions_generator
    ```
 
 3. Install dependencies:
@@ -80,10 +80,6 @@ const apiKey = "YOUR_GOOGLE_API_KEY";
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
