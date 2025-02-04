@@ -13,6 +13,7 @@ const App = () => {
   const [pdfBlob, setPdfBlob] = useState(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [t,setT] = useState("")
 
   async function extractText(event) {
     setLoading(true);
@@ -22,6 +23,7 @@ const App = () => {
       const file = event.target.files[0];
       const text = await pdfToText(file);
       console.log(text)
+      setT(text)
       const resultapi = await axios.post("/api/content", { prompt: text });
       setData(resultapi.data.content);
       await generatePdf(resultapi.data.content);
@@ -93,6 +95,7 @@ const App = () => {
           onChange={extractText}
           className={styles.fileInput}
         />
+<p>{t}</p>
         {loading && (
           <div className={styles.loading}>
             <div className={styles.loadingCircle}></div>
